@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Smart Socket</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A page allowing control of a smart socket"
+    />
+    <meta name="keywords" content="Smart Socket, Automation, IoT" />
+    <meta name="author" content="Jakub Skwierczynski" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Smart Socket</h1>
+    </div>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="electrical.html">Electrical Parameters</a>
+      <a href="sched.html">Schedule</a>
+      <a href="nightlight.html">Night Light Mode</a>
+      <a href="temperature.html">Temperature Mode</a>
+      <a href="safety.html" class="active">Safety</a>
+      <a href="user.html">User</a>
+      <a href="logout_html.html" class="right" onclick="logoutButton()">Logout</a>
+    </div>
+
+    <div class="main">
+      <h1>Safety</h1>
+      <p>%SAFETY_BUTTON%</p>
+      <h2>Safety Status</h2>
+      <p><span id="alarm">%ALARM%</span></p>
+      <form action="/safety" target="hidden-form">
+        <h2>Overload Protection</h2>
+        <div class="form"
+          >Turn off socket when current exceeds
+          <input
+            type="number"
+            min="0"
+            max="10"
+            step="0.01"
+            id="input_amp"
+            name="input_amp"
+            value="%INPUT_AMP%"
+            style="width: 65px;"
+          />A for
+          <input
+            type="number"
+            min="1"
+            max="3600"
+            id="input_s_amp"
+            name="input_s_amp"
+            value="%INPUT_S_AMP%"
+            style="width: 60px;"
+          />s</div>
+        <h2>Thermal Protection</h2>
+        <div class="form"
+          >Turn off socket when temperature exceeds
+          <input
+            type="number"
+            min="10"
+            max="70"
+            step="0.1"
+            id="input_deg"
+            name="input_deg"
+            value="%INPUT_DEG%"
+            style="width: 65px;"
+          />&degC for
+          <input
+            type="number"
+            min="1"
+            max="3600"
+            id="input_s_deg"
+            name="input_s_deg"
+            value="%INPUT_S_DEG%"
+            style="width: 60px;"
+          />s</div> <br>
+        <input type="submit" value="Submit" onclick="refresh()" />
+      </form>
+      <iframe style="display: none" name="hidden-form"></iframe>
+    </div>
+  </body>
+</html>

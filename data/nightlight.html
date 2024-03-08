@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Smart Socket</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A page allowing control of a smart socket"
+    />
+    <meta name="keywords" content="Smart Socket, Automation, IoT" />
+    <meta name="author" content="Jakub Skwierczynski" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Smart Socket</h1>
+    </div>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="electrical.html">Electrical Parameters</a>
+      <a href="sched.html">Schedule</a>
+      <a href="nightlight.html" class="active">Night Light Mode</a>
+      <a href="temperature.html">Temperature Mode</a>
+      <a href="safety.html">Safety</a>
+      <a href="user.html">User</a>
+      <a href="logout_html.html" class="right" onclick="logoutButton()">Logout</a>
+    </div>
+
+    <div class="main">
+      <h1>Night Light Mode</h1>
+      <p>%NIGHTLIGHT_BUTTON%</p>
+      <p>Current activation time of the socket: <span id="input_timesec">%INPUT_TIMESEC%</span>s</p>
+      <form action="/get" target="hidden-form">
+        <div class="form">Change time (1-60s):
+          <input
+            type="number"
+            id="input_timesec"
+            name="input_timesec"
+            placeholder="..."
+            min="1"
+            max="60"
+            style="width: 40px;"
+          />
+          <input type="submit" value="Submit" onclick="refresh()" />
+        </div>
+      </form>
+      <iframe style="display: none" name="hidden-form"></iframe>
+    </div>
+  </body>
+</html>

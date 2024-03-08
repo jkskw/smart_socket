@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Smart Socket</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A page allowing control of a smart socket"
+    />
+    <meta name="keywords" content="Smart Socket, Automation, IoT" />
+    <meta name="author" content="Jakub Skwierczynski" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Smart Socket</h1>
+    </div>
+    <div class="main">
+      <h1>Wi-Fi Network Information</h1>
+      <div style="text-align: center">
+        <form action="/" method="POST">
+          <table class="center">
+            <tr>
+              <td style="text-align: right">SSID:</td>
+              <td><input type="text" id="ssid" name="ssid" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: right">Password:</td>
+              <td><input type="password" id="pw" name="pw" /></td>
+            </tr>
+            <tr>
+              <td>
+                <div id="checkbox" style="position:relative; left:147px; top: 5px; margin-bottom: 10px;">
+                  <input type="checkbox" class="largerCheckbox" onclick="showPassword1()" style="margin-right: 15px;"/>Show Password
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: right">IP Address:</td>
+              <td>
+                <input type="text" id="ip" name="ip" />
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: right">Gateway:</td>
+              <td>
+                <input
+                  type="text"
+                  id="gateway"
+                  name="gateway"
+                />
+              </td>
+            </tr>
+          </table>
+          <br>
+          <input type ="submit" value ="Submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

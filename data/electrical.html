@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Smart Socket</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A page allowing control of a smart socket"
+    />
+    <meta name="keywords" content="Smart Socket, Automation, IoT" />
+    <meta name="author" content="Jakub Skwierczynski" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Smart Socket</h1>
+    </div>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="electrical.html" class="active">Electrical Parameters</a>
+      <a href="sched.html">Schedule</a>
+      <a href="nightlight.html">Night Light Mode</a>
+      <a href="temperature.html">Temperature Mode</a>
+      <a href="safety.html">Safety</a>
+      <a href="user.html">User</a>
+      <a href="logout_html.html" class="right" onclick="logoutButton()">Logout</a>
+    </div>
+
+    <div class="main">
+      <h1>Electrical Parameters</h1>
+      <p>Current: <span id="current">%CURRENT%</span>A</p>
+      <p>Voltage: <span id="voltage">%VOLTAGE%</span>V</p>
+      <p>Power: <span id="power">%POWER%</span>W</p>
+      <p>
+        Total Energy Consumption: <span id="kWh">%KWH%</span>kWh<button
+          style="margin-left: 8px"
+          class="button_reset"
+          id="reset"
+          onclick="btn_reset()"
+        >
+          Reset
+        </button>
+      </p>
+      <p>
+        Cost of Energy Consumption: <span id="total_cost">%TOTAL_COST%</span>PLN
+      </p>
+      <p>
+        Current Price per 1kWh:
+        <span id="input_kWh_cost">%INPUT_KWH_COST%</span>PLN
+      </p>
+      <form action="/get" target="hidden-form">
+        <div class="form">
+          Change Price per 1kWh (PLN):
+          <input
+            type="number"
+            id="input_kWh_cost"
+            name="input_kWh_cost"
+            placeholder="..."
+            step="0.01"
+            min="0"
+            max="5"
+            style="width: 55px;"
+          />
+          <input type="submit" value="Submit" onclick="refresh()" />
+        </div>
+      </form>
+      <iframe style="display: none" name="hidden-form"></iframe>
+    </div>
+  </body>
+</html>
