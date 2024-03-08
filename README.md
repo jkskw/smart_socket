@@ -36,7 +36,7 @@ In this section you will find required hardware components and necessary softwar
 #### Circuit Diagram {#circuit}
 
 <p align="center" width="100%">
-    <img src="/circuits_diagram.png"> 
+    <img src="images/circuits_diagram.png"> 
 </p>
 
 #### Software Requirements {#software}
@@ -46,7 +46,7 @@ In this section you will find required hardware components and necessary softwar
 #### Remote Control via Wi-Fi {#remote}
 Users can control the socket remotely through a web interface.
 <p align="center" width="100%">
-    <img src="/main_page.png"> 
+    <img src="images/main_page.png"> 
 </p>
 
 #### Energy Monitoring {#energy-monitoring}
@@ -54,52 +54,52 @@ Users can control the socket remotely through a web interface.
 The smart socket provides real-time insights into energy consumption, including current, voltage, active power consumption, and total energy usage. This data enables users to analyze their electricity usage patterns, optimize consumption, and ultimately reduce costs.
 
 <p align="center" width="100%">
-    <img src="/electrical_parameters.png"> 
+    <img src="images/electrical_parameters.png"> 
 </p>
 
 #### Schedule Configuration {#schedule}
 The "Schedule" tab allows users to set up on/off schedules for the smart socket based on specific hours and days of the week, utilizing the precision of the RTC DS1307 clock to maintain accurate timekeeping even in the absence of power supply.
 
 <p align="center" width="100%">
-    <img src="/schedule.png"> 
+    <img src="images/schedule.png"> 
 </p>
 
 #### Night Light Mode {#night_light_mode}
 The "Night Light Mode" enables users to set up the socket to activate upon motion detection by the PIR HC-SR501 sensor. This feature, named for its primary function of providing nighttime illumination, allows users to customize the duration for which the smart socket remains activated after motion is detected, thus creating an efficient night light tailored to individual preferences.
 
 <p align="center" width="100%">
-    <img src="/night_light_mode.png"> 
+    <img src="images/night_light_mode.png"> 
 </p>
 
 #### Temperature Mode {#temperature_mode}
 The "Temperature Mode" allows users to define the logic for turning the smart socket on and off based on ambient temperature values. This feature serves as a versatile tool suitable for both heating and cooling purposes within a room, utilizing connected devices to regulate temperature efficiently.
 
 <p align="center" width="100%">
-    <img src="/temperature_mode.png"> 
+    <img src="images/temperature_mode.png"> 
 </p>
 
 #### Safety Configuration {#safety}
 The "Safety" page enables users to configure overload and thermal protections. Implementing these safety measures in the smart socket prevents overloads and excessive heating, minimizing the risk of electrical damage and fires.
 
 <p align="center" width="100%">
-    <img src="/safety.png"> 
+    <img src="images/safety.png"> 
 </p>
 
 The screenshots below depict alarm messages indicating the activation of protections, corresponding to overload and thermal protections. These messages include the date and time of the protection activation, as well as the last recorded measurement data before the protection triggered. This allows users to promptly understand the cause of the alarm and take appropriate steps to resolve the issue. The occurrence of any alarm message results in the immediate shutdown of the smart socket and deactivation of all activated modes.
 
 <p align="center" width="100%">
-    <img src="/overload.png"> 
+    <img src="images/overload.png"> 
 </p>
 
 <p align="center" width="100%">
-    <img src="/over-temperature.png"> 
+    <img src="images/over-temperature.png"> 
 </p>
 
 #### User Profile {#user}
 The "User" tab allows users to modify the login credentials required to access the "Smart Socket" webpage. 
 
 <p align="center" width="100%">
-    <img src="/user.png"> 
+    <img src="images/user.png"> 
 </p>
 
 ## License {#license}
