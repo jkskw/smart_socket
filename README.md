@@ -1,6 +1,6 @@
 # Smart Socket
 ## Table of contents
-- [About The Project](#about)
+- [About The Project](#about-the-project)
 - [Getting Started](#getting_started)
     - [Hardware Requirements](#hardware)
     - [Circuit Diagram](#circuit)
@@ -14,7 +14,7 @@
     - [Safety Configuration](#safety)
     - [User Profile](#user)
 - [License](#license)
-## About The Project {#about}
+## About The Project
 The Smart Socket project aims to create an intelligent socket based on the ESP32 microcontroller. The goal is to design a versatile socket that enables remote control, measurement and data transmission.
 ## Getting Started {#getting_started}
 In this section you will find required hardware components and necessary software to start Smart Socket project.
@@ -103,4 +103,4 @@ The "User" tab allows users to modify the login credentials required to access t
 </p>
 
 ## License {#license}
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [`LICENSE.txt`](/LICENSE.txt) for more information.
