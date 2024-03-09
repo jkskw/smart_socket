@@ -5,6 +5,7 @@
     - [Hardware Requirements](#hardware-requirements)
     - [Circuit Diagram](#circuit-diagram)
     - [Software Requirements](#software-requirements)
+    - [Setup](#setup)
 - [Features](#features)
     - [Remote Control via Wi-Fi](#remote-control-via-wi-fi)
     - [Energy Monitoring](#energy-monitoring)
@@ -42,9 +43,31 @@ In this section you will find required hardware components and necessary softwar
 #### Software Requirements
 - [Arduino IDE](https://www.arduino.cc/en/software) or [PlatformIO](https://platformio.org/) or any IDE that can be used to program ESP32.
 - [CP210x](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)  driver for Computer (This is a driver that allows you to communicate with ESP32 via USB).
+
+#### Setup
+After connecting the socket to power, an access point (AP) named ***Smart Socket*** with the password ***automation*** is automatically created, requiring users to log in for further configuration.
+
+<p align="center" width="100%">
+    <img src="images/ap.png"> 
+</p>
+
+After successfully logging into the access point, users need to fill in the data. Based on the entered SSID and Wi-Fi network password, the ESP32 in station mode connects to the access point integrated with the home router.
+
+<p align="center" width="100%">
+    <img src="images/network_config.png"> 
+</p>
+
+After correctly entering the Wi-Fi network data, the following message will appear on the webpage:
+`ESP will restart, then connect to the router and go to IP address: XXX.XXX.XXX.XXX
+If there is no connection, please fill out the form again under IP address: XXX.XXX.XXX.XXX`
+
+At the end, users need to log in to the website using the following credentials:
+- Username: ***admin***
+- Password: ***admin***
 ## Features
 #### Remote Control via Wi-Fi
 Users can control the socket remotely through a web interface.
+
 <p align="center" width="100%">
     <img src="images/main_page.png"> 
 </p>
